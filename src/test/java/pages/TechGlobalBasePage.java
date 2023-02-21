@@ -13,14 +13,14 @@ public class TechGlobalBasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "dropdown-button")
+    @FindBy(id = "dropdown-menu")
     public WebElement headerDropdown;
+
+    @FindBy(id = "frontend-option")
+    public WebElement frontendDropdownOption;
 
     @FindBy(id = "dropdown-menu a")
     public List<WebElement> headerDropdownOptions;
 
-    public void getFrontendTestingPage(){
-        headerDropdown.click();
-        headerDropdownOptions.get(0).click();
-    }
+
 }

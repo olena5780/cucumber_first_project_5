@@ -27,9 +27,9 @@ public class PaginationSteps {
         @Before
         public void setup() {
                 driver = Driver.getDriver();
-                techGlobalBasePage = new TechGlobalBasePage();
                 techGlobalFrontendTestingHomePage = new TechGlobalFrontendTestingHomePage();
                 techGlobalPaginationPage = new TechGlobalPaginationPage();
+                techGlobalBasePage = new TechGlobalBasePage();
 
         }
 
@@ -43,9 +43,9 @@ public class PaginationSteps {
                 techGlobalBasePage.headerDropdown.click();
         }
 
-        @When("user clicks on Frontend Testing header dropdown option")
+        @And("user clicks on Frontend Testing header dropdown option")
         public void user_clicks_on_header_dropdown_option() {
-                techGlobalBasePage.getFrontendTestingPage();
+                techGlobalBasePage.headerDropdownOptions.get(0).click();
         }
 
         @Then("user should be navigated to {string}")
@@ -125,7 +125,7 @@ public class PaginationSteps {
         public void userShouldSeeCityWithInfoBelowAndAnImage(DataTable information) {
                 Assert.assertTrue(techGlobalPaginationPage.image.isDisplayed());
                 for (int i = 0; i < information.asList().size(); i++) {
-                        Assert.assertEquals(information.asList().get(i),techGlobalPaginationPage.cityInfo.get(i).getText());
+                        Assert.assertEquals(information.asList().get(i), techGlobalPaginationPage.cityInfo.get(i).getText());
 
                 }
                 techGlobalPaginationPage.nextButton.click();
