@@ -1,0 +1,10 @@
+utilities/Driver.class
+utilities/DropdownHandler.class
+runners/Runner.class
+pages/TechGlobalFrontendTestingHomePage.class
+utilities/ConfigReader.class
+steps/PaginationSteps.class
+pages/TechGlobalBasePage.class
+utilities/Waiter.class
+pages/TechGlobalPaginationPage.class
+steps/Hooks.class
